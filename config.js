@@ -99,7 +99,86 @@ window.CONFIG = {
             key: 'KeyE',
             bgColor: {
                 type: 'solid',
-                color: '#fbe216'
+                color: '#FBE216'
+            },
+            textColor: '#000',
+            pinned: true
+        },
+        {
+            category: 'Programming',
+            name: 'ChatGPT',
+            icon: 'chatGPT',
+            url: 'https://chat.openai.com/chat',
+            normalisedURL: 'openai.com',
+            triggers: [
+                'c',
+                'ch',
+                'cha',
+                'chat',
+                'chatg',
+                'chatgp',
+                'gpt',
+                'cgpt',
+                'chatgpt'
+            ],
+            key: 'KeyC',
+            bgColor: {
+                type: 'solid',
+                color: '#70a597',
+            },
+            textColor: '#f7f7f7',
+            pinned: true
+        },
+        {
+            category: 'Communication',
+            name: 'Outlook',
+            icon: 'outlook',
+            url: 'https://outlook.office365.com/mail/',
+            normalisedURL: 'https://outlook.office365.com/mail/',
+            triggers: [
+                'o',
+                'out',
+                'outl',
+                'outlo',
+                'outloo',
+                'outlook'
+            ],
+            key: 'KeyO',
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                colors: ['#28a8ea', '#0c6acd'],
+                stops: [0, 100]
+            },
+            textColor: '#e8e8e8',
+            pinned: true
+        },
+        {
+            category: 'Social',
+            name: 'Twitch',
+            icon: 'twitch',
+            url: 'https://twitch.tv',
+            normalisedURL: 'twitch.tv',
+            triggers: [
+                't',
+                'tw',
+                'twi',
+                'twit',
+                'twitc',
+                'twitch',
+            ],
+            key: 'KeyT',
+            commands: {
+                search: {
+                    template: '{@}/search?term={$}'
+                },
+                go: {
+                    template: '{@}/{$}'
+                }
+            },
+            bgColor: {
+                type: 'solid',
+                color: '#8c44f7'
             },
             textColor: '#000',
             pinned: true
@@ -109,8 +188,12 @@ window.CONFIG = {
             name: 'YouTube',
             triggers: [
                 'y',
-                'yt',
+                'yo',
+                'you',
+                'yout',
+                'youtub',
                 'youtube',
+                'yt'
             ],
             key: 'KeyY',
             icon: 'youtube',
@@ -130,36 +213,6 @@ window.CONFIG = {
                 color: '#f30002'
             },
             textColor: '#212121',
-            pinned: true
-        },
-        {
-            category: 'Social',
-            name: 'Reddit',
-            triggers: [
-                'r',
-                'rd',
-                'reddit',
-            ],
-            key: 'KeyR',
-            icon: 'reddit',
-            url: 'https://reddit.com',
-            normalisedURL: 'reddit.com',
-            commands: {
-                go: {
-                    template: '{@}/r/{$}',
-                    description: 'go to subreddit'
-                },
-                search: {
-                    template: '{@}/search?q={$}'
-                }
-            },
-            bgColor: {
-                type: 'gradient',
-                gradientType: 'linear',
-                colors: ['#f07e23', '#f74300'],
-                stops: [0, 100]
-            },
-            textColor: '#fff',
             pinned: true
         },
         {
@@ -195,24 +248,115 @@ window.CONFIG = {
             pinned: true
         },
         {
-            category: 'Programming',
-            name: 'ChatGPT',
-            icon: 'chatGPT',
-            url: 'https://chat.openai.com/chat',
-            normalisedURL: 'openai.com',
+            category: 'Music',
+            name: 'spotify',
+            icon: 'spotify',
+            url: 'https://open.spotify.com',
+            normalisedURL: 'spotify.com',
             triggers: [
-                'c',
-                'chat',
-                'gpt',
-                'cgpt',
-                'chatgpt'
+                'music',
+                'sp',
+                'sfy',
+                'spo',
+                'spotify'
             ],
-            key: 'KeyC',
+            commands: {
+                search: {
+                    template: '{@}/search/{$}'
+                },
+                go: {
+                    template: '{@}/track/{$}',
+                    description: 'go to track'
+                }
+            },
             bgColor: {
                 type: 'solid',
-                color: '#70a597',
+                color: '#1ccc5b'
             },
-            textColor: '#f7f7f7',
+            textColor: '#000',
+            pinned: true
+        },
+        {
+            category: 'Other',
+            name: 'Reverso',
+            icon: 'reverso',
+            url: 'https://www.reverso.net/orthographe/correcteur-francais/',
+            normalisedURL: 'www.reverso.net/orthographe/correcteur-francais/',
+            triggers: [
+                'r',
+                're',
+                'rev',
+                'reve',
+                'rever',
+                'revers',
+                'reverso',
+            ],
+            key: 'KeyR',
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                colors: ['#ec523b', '#157cd5'],
+                stops: [0, 55]
+            },
+            textColor: '#000000',
+            pinned: true
+        },
+        {
+            category: 'Communication',
+            name: 'Gmail',
+            icon: 'gmail',
+            url: 'https://gmail.com',
+            normalisedURL: 'gmail.com',
+            triggers: [
+                'em',
+                'gm',
+                'mail',
+                'gmail'
+            ],
+            key: 'KeyM',
+            commands: {
+                search: {
+                    template: '{@}/#search/{$}'
+                }
+            },
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                angle: 45,
+                colors: ['#df493b', '#e8e8e8'],
+                stops: [50, 100]
+            },
+            textColor: '#e8e8e8',
+            pinned: true
+        },
+        {
+            category: 'Social',
+            name: 'X',
+            icon: 'X',
+            url: 'https://x.com',
+            normalisedURL: 'x.com',
+            triggers: [
+                'tt',
+                'twt',
+                'twit',
+                'twitt',
+                'twitter',
+                'x'
+            ],
+            key: 'KeyX',
+            commands: {
+                search: {
+                    template: '{@}/search?q={$}'
+                },
+                go: {
+                    template: '{@}/{$}'
+                }
+            },
+            bgColor: {
+                type: 'solid',
+                color: '#000000'
+            },
+            textColor: '#e8e8e8',
             pinned: true
         },
         {
@@ -244,117 +388,6 @@ window.CONFIG = {
             textColor: '#e8e8e8',
             pinned: true
         },
-
-        {
-            category: 'Music',
-            name: 'spotify',
-            icon: 'spotify',
-            url: 'https://open.spotify.com',
-            normalisedURL: 'spotify.com',
-            triggers: [
-                'music',
-                'sp',
-                'sfy',
-                'spo',
-                'spotify'
-            ],
-            commands: {
-                search: {
-                    template: '{@}/search/{$}'
-                },
-                go: {
-                    template: '{@}/track/{$}',
-                    description: 'go to track'
-                }
-            },
-            bgColor: {
-                type: 'solid',
-                color: '#1ccc5b'
-            },
-            textColor: '#000',
-            pinned: true
-        },
-        {
-            category: 'Social',
-            name: 'Twitch',
-            icon: 'twitch',
-            url: 'https://twitch.tv',
-            normalisedURL: 'twitch.tv',
-            triggers: [
-                't',
-                'tw',
-                'twitch',
-            ],
-            key: 'KeyT',
-            commands: {
-                search: {
-                    template: '{@}/search?term={$}'
-                },
-                go: {
-                    template: '{@}/{$}'
-                }
-            },
-            bgColor: {
-                type: 'solid',
-                color: '#8c44f7'
-            },
-            textColor: '#000',
-            pinned: true
-        },
-        {
-            category: 'Entertainment',
-            name: 'Netflix',
-            triggers: [
-                'n',
-                'nf',
-                'nfx',
-                'netflix',
-            ],
-            key: 'KeyN',
-            icon: 'netflix',
-            url: 'https://media.netflix.com',
-            normalisedURL: 'netflix.com',
-            commands: {
-                search: {
-                    template: '{@}/en/search?&term={$}'
-                }
-            },
-            bgColor: {
-                type: 'solid',
-                color: '#000'
-            },
-            textColor: '#da0813',
-            pinned: true
-        },
-        {
-            category: 'Social',
-            name: 'X',
-            icon: 'X',
-            url: 'https://x.com',
-            normalisedURL: 'x.com',
-            triggers: [
-                'tt',
-                'twt',
-                'twit',
-                'twitt',
-                'twitter',
-                'x'
-            ],
-            commands: {
-                search: {
-                    template: '{@}/search?q={$}'
-                },
-                go: {
-                    template: '{@}/{$}'
-                }
-            },
-            bgColor: {
-                type: 'solid',
-                color: '#000000'
-            },
-            textColor: '#e8e8e8',
-            pinned: true
-        },
         {
             category: 'Work',
             name: 'Linkedin',
@@ -364,7 +397,11 @@ window.CONFIG = {
                 'l',
                 'lk',
                 'li',
+                'lin',
+                'link',
+                'linke',
                 'linked',
+                'linkedi',
                 'linkedin'
             ],
             url: 'https://linkedin.com',
@@ -382,30 +419,229 @@ window.CONFIG = {
             pinned: true
         },
         {
-            category: 'Communication',
-            name: 'Gmail',
-            icon: 'gmail',
-            url: 'https://gmail.com',
-            normalisedURL: 'gmail.com',
+            category: 'Social',
+            name: 'Reddit',
             triggers: [
-                'em',
-                'gm',
-                'mail',
-                'gmail'
+                'rd',
+                'reddit',
             ],
+            icon: 'reddit',
+            url: 'https://reddit.com',
+            normalisedURL: 'reddit.com',
             commands: {
+                go: {
+                    template: '{@}/r/{$}',
+                    description: 'go to subreddit'
+                },
                 search: {
-                    template: '{@}/#search/{$}'
+                    template: '{@}/search?q={$}'
                 }
             },
             bgColor: {
                 type: 'gradient',
                 gradientType: 'linear',
-                angle: 45,
-                colors: ['#df493b', '#e8e8e8'],
-                stops: [50, 100]
+                colors: ['#f07e23', '#f74300'],
+                stops: [0, 100]
             },
-            textColor: '#e8e8e8',
+            textColor: '#fff',
+            pinned: true
+        },
+        {
+            category: 'Other',
+            name: 'PayPal',
+            triggers: [
+                'p',
+                'pa',
+                'pay',
+                'payp',
+                'paypa',
+                'paypal',
+                'pp'
+            ],
+            key: 'KeyP',
+            icon: 'paypal',
+            url: 'https://www.paypal.com/signin',
+            normalisedURL: 'www.paypal.com/signin',
+            bgColor: {
+                type: 'solid',
+                color: '#0070e0'
+            },
+            textColor: '#FFF',
+            pinned: true
+        },
+        {
+            category: 'Shopping',
+            name: 'Amazon',
+            triggers: [
+                'a',
+                'am',
+                'ama',
+                'amaz',
+                'amazo',
+                'amazon',
+                'amz',
+            ],
+            key: 'KeyA',
+            icon: 'amazon',
+            url: 'https://www.amazon.com/',
+            normalisedURL: 'amazon.com',
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                colors: ['#f29100', '#fff'],
+                stops: [0, 80]
+            },
+            textColor: '#000',
+            pinned: true
+        },
+        {
+            category: 'Entertainment',
+            name: 'Prime Gaming',
+            triggers: [
+                'pg',
+                'prime g',
+                'prime ga',
+                'prime gam',
+                'prime gami',
+                'prime gamin',
+                'prime gaming',
+                'primegaming',
+                'primeg',
+                'gaming'
+            ],
+            icon: 'primeg',
+            url: 'https://gaming.amazon.com',
+            normalisedURL: 'gaming.amazon.com',
+            bgColor: {
+                type: 'solid',
+                color: '#9146ff'
+            },
+            textColor: '#FFFFFF',
+            pinned: true
+        },
+        {
+            category: 'Entertainment',
+            name: 'Prime Video',
+            triggers: [
+                'prime',
+                'pv',
+                'primev',
+                'prime v',
+                'prime vi',
+                'prime vid',
+                'prime vide',
+                'prime video',
+                'primevideo',
+                'video'
+            ],
+            icon: 'primev',
+            url: 'https://www.primevideo.com',
+            normalisedURL: 'www.primevideo.com',
+            bgColor: {
+                type: 'solid',
+                color: '#1997fe'
+            },
+            textColor: '#FFFFFF',
+            pinned: true
+        },
+        {
+            category: 'Entertainment',
+            name: 'VoirAnime',
+            triggers: [
+                'v',
+                'va',
+                'vo',
+                'voi',
+                'voir',
+                'voira',
+                'voiran',
+                'voirani',
+                'voiranim',
+                'voiranime',
+                'anime'
+            ],
+            key: 'KeyV',
+            icon: 'voiranime',
+            url: 'https://voiranime.com',
+            normalisedURL: 'voiranime.com',
+            bgColor: {
+                type: 'solid',
+                color: '#1c1a20'
+            },
+            textColor: '#FFFFFF',
+            pinned: true
+        },
+        {
+            category: 'Entertainment',
+            name: 'Netflix',
+            triggers: [
+                'ne',
+                'net',
+                'netf',
+                'netfl',
+                'netfli',
+                'nf',
+                'nfx',
+                'netflix',
+            ],
+            icon: 'netflix',
+            url: 'https://www.netflix.com/browse',
+            normalisedURL: 'www.netflix.com/browse',
+            commands: {
+                search: {
+                    template: '{@}/en/search?&term={$}'
+                }
+            },
+            bgColor: {
+                type: 'solid',
+                color: '#000'
+            },
+            textColor: '#FF0000',
+            pinned: true
+        },
+        {
+            category: 'Entertainment',
+            name: 'Canal+',
+            triggers: [
+                'ca',
+                'can',
+                'cana',
+                'canal',
+                'canal+',
+                'canalplus'
+            ],
+            icon: 'canal',
+            url: 'https://www.canalplus.fr',
+            normalisedURL: 'disneyplus.com',
+            bgColor: {
+                type: 'solid',
+                color: '#000'
+            },
+            textColor: '#fff',
+            pinned: true
+        },
+        {
+            category: 'Entertainment',
+            name: 'Disney+',
+            triggers: [
+                'di',
+                'dis',
+                'disn',
+                'disne',
+                'disney',
+                'disneyplus',
+                'disney+'
+            ],
+            icon: 'disney',
+            url: 'https://www.disneyplus.com',
+            normalisedURL: 'disneyplus.com',
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'radial',
+                colors: ['#bbeeff','#8bccff','#4278ff','#0005e8'],
+                stops: [0, 25, 50, 100]
+            },
+            textColor: '#fff',
             pinned: true
         },
     ],
