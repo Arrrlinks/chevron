@@ -644,6 +644,232 @@ window.CONFIG = {
             textColor: '#fff',
             pinned: true
         },
+        {
+            category: 'School',
+            name: 'Theia',
+            icon: 'theia',
+            url: 'https://elffe.theia.fr',
+            normalisedURL: 'elffe.theia.fr',
+            triggers: [
+                'th',
+                'the',
+                'thei',
+                'theia'
+            ],
+            commands: {
+                search: {
+                    template: '{@}/#search/{$}'
+                }
+            },
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                angle: 45,
+                colors: ['#134554', '#55708f', '#a88cb8', '#e49fd4', '#fdace6', '#fc8ed9', '#fb6cc5', '#f748a3', '#e62369'],
+                stops: [0, 15]
+            },
+            textColor: '#e8e8e8'
+        },
+        {
+            category: 'Communication',
+            name: 'Theia',
+            icon: 'theia',
+            url: 'https://elffe.theia.fr',
+            normalisedURL: 'elffe.theia.fr',
+            triggers: [
+                'th',
+                'the',
+                'thei',
+                'theia'
+            ],
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                angle: 45,
+                colors: ['#134554', '#55708f', '#a88cb8', '#e49fd4', '#fdace6', '#fc8ed9', '#fb6cc5', '#f748a3', '#e62369'],
+                stops: [0, 15]
+            },
+            textColor: '#FFFFFF'
+        },
+        {
+            category: 'Other',
+            name: 'Ionos',
+            icon: 'Ionos',
+            url: 'https://www.ionos.fr',
+            normalisedURL: 'www.ionos.fr',
+            triggers: [
+                'io',
+                'ion',
+                'iono',
+                'ionos'
+            ],
+            bgColor: {
+                type: 'solid',
+                color: '#003d8f'
+            },
+            textColor: '#FFFFFF'
+        },
+        {
+            category: 'Monitoring',
+            name: 'Grafana',
+            icon: 'grafana',
+            url: 'https://grafana.antoinef.fr',
+            normalisedURL: 'grafana.antoinef.fr',
+            triggers: [
+                'gr',
+                'gra',
+                'graf',
+                'grafa',
+                'grafan',
+                'grafana',
+            ],
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                angle: 45,
+                colors: ['#fbc80b', '#f15a29'],
+                stops: [0, 50]
+            },
+            textColor: '#000000'
+        },
+        {
+            category: 'Other',
+            name: 'Docspell',
+            icon: 'docspell',
+            url: 'https://docspell.antoinef.fr',
+            normalisedURL: 'docspell.antoinef.fr',
+            triggers: [
+                'do',
+                'doc',
+                'docs',
+                'docsp',
+                'docspe',
+                'docspel',
+                'docspell',
+            ],
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'radial',
+                colors: ['#17285d', '#ffffff', '#9c0011'],
+                stops: [0, 30]
+            },
+            textColor: '#000000'
+        },
+        {
+            category: 'Monitoring',
+            name: 'Dozzle',
+            icon: 'dozzle',
+            url: 'https://dozzle.antoinef.fr',
+            normalisedURL: 'dozzle.antoinef.fr',
+            triggers: [
+                'doz',
+                'dozz',
+                'dozzl',
+                'dozzle',
+            ],
+            bgColor: {
+                type: 'solid',
+                color: '#ffe08a'
+            },
+            textColor: '#121212'
+        },
+        {
+            category: 'Other',
+            name: 'Portainer',
+            icon: 'portainer',
+            url: 'https://portainer.antoinef.fr',
+            normalisedURL: 'portainer.antoinef.fr',
+            triggers: [
+                'po',
+                'por',
+                'port',
+                'porta',
+                'portai',
+                'portain',
+                'portaine',
+                'portainer',
+            ],
+            bgColor: {
+                type: 'solid',
+                color: '#13bef9'
+            },
+            textColor: '#181818'
+        },
+        {
+            category: 'Monitoring',
+            name: 'Portainer',
+            icon: 'portainer',
+            url: 'https://portainer.antoinef.fr',
+            normalisedURL: 'portainer.antoinef.fr',
+            triggers: [
+                'po',
+                'por',
+                'port',
+                'porta',
+                'portai',
+                'portain',
+                'portaine',
+                'portainer',
+            ],
+            bgColor: {
+                type: 'solid',
+                color: '#13bef9'
+            },
+            textColor: '#181818'
+        },
+        {
+            category: 'Monitoring',
+            name: 'Speedtest',
+            icon: 'speedtest',
+            url: 'https://speedtest.antoinef.fr',
+            normalisedURL: 'speedtest.antoinef.fr',
+            triggers: [
+                'spe',
+                'spee',
+                'speed',
+                'speedt',
+                'speedte',
+                'speedtes',
+                'speedtest'
+            ],
+            bgColor: {
+                type: 'solid',
+                color: '#fbbf24'
+            },
+            textColor: '#09090b'
+        },
+        {
+            category: 'Other',
+            name: 'Vaultwarder',
+            icon: 'vaultwarden',
+            url: 'https://vaultwarden.antoinef.fr',
+            normalisedURL: 'vaultwarder.antoinef.fr',
+            triggers: [
+                'vau',
+                'vaul',
+                'vault',
+                'vaultw',
+                'vaultwa',
+                'vaultwar',
+                'vaultward',
+                'vaultwarde',
+                'vaultwarden',
+                'b',
+                'bi',
+                'bit',
+                'bitw',
+                'bitwa',
+                'bitwar',
+                'bitward',
+                'bitwarde',
+                'bitwarden'
+            ],
+            bgColor: {
+                type: 'solid',
+                color: '#175ddc'
+            },
+            textColor: '#FFFFFF'
+        }
     ],
     commands: [
         {
