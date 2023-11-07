@@ -137,6 +137,7 @@ window.CONFIG = {
             normalisedURL: 'https://outlook.office365.com/mail/',
             triggers: [
                 'o',
+                'ou',
                 'out',
                 'outl',
                 'outlo',
@@ -797,28 +798,6 @@ window.CONFIG = {
         },
         {
             category: 'Monitoring',
-            name: 'Portainer',
-            icon: 'portainer',
-            url: 'https://portainer.antoinef.fr',
-            normalisedURL: 'portainer.antoinef.fr',
-            triggers: [
-                'po',
-                'por',
-                'port',
-                'porta',
-                'portai',
-                'portain',
-                'portaine',
-                'portainer',
-            ],
-            bgColor: {
-                type: 'solid',
-                color: '#13bef9'
-            },
-            textColor: '#181818'
-        },
-        {
-            category: 'Monitoring',
             name: 'Speedtest',
             icon: 'speedtest',
             url: 'https://speedtest.antoinef.fr',
@@ -867,6 +846,33 @@ window.CONFIG = {
             bgColor: {
                 type: 'solid',
                 color: '#175ddc'
+            },
+            textColor: '#FFFFFF'
+        },
+        {
+            category: 'Other',
+            name: 'Maps',
+            icon: 'maps',
+            url: 'https://www.google.fr/maps',
+            normalisedURL: 'www.google.fr/maps',
+            triggers: [
+                'm',
+                'ma',
+                'map',
+                'maps',
+                'google maps'
+            ],
+            commands: {
+                search: {
+                    template: '{@}/place/{$}'
+                }
+            },
+            bgColor: {
+                type: 'gradient',
+                gradientType: 'linear',
+                angle: 45,
+                colors: ['#4086f4', '#31aa52'],
+                stops: [0, 50]
             },
             textColor: '#FFFFFF'
         }
