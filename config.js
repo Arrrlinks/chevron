@@ -875,6 +875,28 @@ window.CONFIG = {
                 stops: [0, 50]
             },
             textColor: '#FFFFFF'
+        },
+        {
+            category: 'Other',
+            name: 'Windmmill',
+            icon: 'windmill',
+            url: 'https://windmill.antoinef.fr/',
+            normalisedURL: 'windmill.antoinef.fr/',
+            triggers: [
+                'w',
+                'wi',
+                'win',
+                'wind',
+                'windm',
+                'windmi',
+                'windmil',
+                'windmill',
+            ],
+            bgColor: {
+                type: 'solid',
+                color: '#3b82f6'
+            },
+            textColor: '#FFFFFF'
         }
     ],
     commands: [
